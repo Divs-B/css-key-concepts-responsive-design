@@ -18,3 +18,12 @@ body {
 img {
     width: 250px;
 }
+
+/*Construct a rule for container to display
+cat cards beside each other in flex*/
+.container{
+    display: flex;
+    justify-content: flex-start;
+    margin-left: auto;   
+    flex-flow: wrap; 
+}
