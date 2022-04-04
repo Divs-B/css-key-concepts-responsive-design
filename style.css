@@ -27,3 +27,39 @@ cat cards beside each other in flex*/
     margin-left: auto;   
     flex-flow: wrap; 
 }
+
+
+html {
+  font-size: 100%; /* base size 100% usually means 16px*/
+}
+
+.h1{
+  font-size: 2.25rem; /* rem is relative to our base font size*/
+}
+
+.p{
+  font-size: 0.75rem; /* rem is relative to our base font size*/
+}
+
+/* Minimum width */
+@media (min-width: 1000px) {
+  div {
+    background:none
+  }
+}
+
+/*Construct rule/query for hiding element if on mobile.
+Todo: need to be specific for mobile dimensions; don't want to fix it with some integer like 767*/
+@media (max-width: 767px) {
+        .hidden-mobile {
+          display: none;
+        }
+      }
+
+/*Construct rule/query for dark mode*/
+.day   { background: #eee; color: black; }
+.night { background: #333; color: white; }
+@media (prefers-color-scheme: dark) {
+  .day.dark-scheme   { background:  #333; color: white; }
+  .night.dark-scheme { background: black; color:  #ddd; }
+}
